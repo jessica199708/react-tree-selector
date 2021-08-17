@@ -1,0 +1,72 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+}
+
+.tree {}
+
+.tree-item {
+    margin:8px 10px 0;
+    overflow: hidden;
+}
+
+.tree-item.close {
+    height: 26px;
+}
+
+.tree-title {
+    display: flex;
+    height: 26px;
+    line-height: 26px;
+}
+
+.tree-title .folder {
+    width: 17px;
+    height: 17px;
+    margin-top: 5px;
+    transform: rotate(0);
+    transition: 3s all ease;
+}
+
+.tree-title .folder.open {
+    background: url(img/drop_down.png) no-repeat;
+    background-size: 15px 15px;
+    transform: rotate(0);
+    cursor: pointer;
+}
+
+.tree-title .folder.close {
+    background: url(img/drop_down.png) no-repeat;
+    background-size: 15px 15px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.tree-title .checkbox {
+     width: 20px;
+     height: 20px;
+     border: 1px solid black;
+     margin: 3px 10px 0;
+     cursor: pointer;
+}
+
+.tree-title .checkbox.checked {
+    background: url(img/check_mark.png) no-repeat 1px 1px;
+    background-size: 15px 15px;
+}
+
+.tree-title .checkbox.half::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background:	#6495ED;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.tree-title .item {
+    font-size: 14px;
+    line-height: 26px;
+}
